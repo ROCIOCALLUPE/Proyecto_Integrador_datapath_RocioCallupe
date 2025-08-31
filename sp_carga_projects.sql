@@ -6,7 +6,7 @@ END
 
 BEGIN
 INSERT INTO Dim_projects
-SELECT  DISTINCT
+SELECT  
             [ProjectID],
 			[ProjectName],
 			[City],
@@ -14,4 +14,5 @@ SELECT  DISTINCT
 			[LaunchYear],
 			[Status]
 FROM [LKH_PROY_INTEGRADOR_RCALL].[dbo].[projects]
+
 END
