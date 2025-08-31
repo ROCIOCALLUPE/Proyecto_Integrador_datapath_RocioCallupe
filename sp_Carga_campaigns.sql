@@ -5,5 +5,6 @@ BEGIN
 END
 BEGIN
 INSERT INTO Dim_campaigns
-    select distinct campaignID,Channel,CampaignName from LKH_PROY_INTEGRADOR_RCALL.dbo.campaigns 
+    select  campaignID,Channel,CampaignName from LKH_PROY_INTEGRADOR_RCALL.dbo.campaigns 
+
 END
