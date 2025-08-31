@@ -6,10 +6,11 @@ END
 
 BEGIN
 INSERT INTO Dim_Brokers
-    SELECT DISTINCT
+    SELECT 
     [BrokerID],
     [BrokerName],
     [Region],
     [Email]
     FROM  [LKH_PROY_INTEGRADOR_RCALL].[dbo].[brokers]
+
 END
