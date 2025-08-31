@@ -1,0 +1,27 @@
+{
+    "name": "Stored procedure_sp_Carga_campaigns",
+    "type": "SqlServerStoredProcedure",
+    "dependsOn": [],
+    "policy": {
+        "timeout": "0.12:00:00",
+        "retry": 0,
+        "retryIntervalInSeconds": 30,
+        "secureOutput": false,
+        "secureInput": false
+    },
+    "typeProperties": {
+        "storedProcedureName": "[dbo].[sp_Carga_campaigns]"
+    },
+    "linkedService": {
+        "name": "DWH_PROY_INTEGRADOR_RCLL_001",
+        "properties": {
+            "annotations": [],
+            "type": "DataWarehouse",
+            "typeProperties": {
+                "endpoint": "baop34nx3fluzjgpeh6yuqtaxm-wpuvt2dulyxenjdn64a4sb7z6e.datawarehouse.fabric.microsoft.com",
+                "artifactId": "4d60650a-c11f-4136-a464-9abbd016e3bb",
+                "workspaceId": "e859e9b3-5e74-462e-a46d-f701c907f9f1"
+            }
+        }
+    }
+}
