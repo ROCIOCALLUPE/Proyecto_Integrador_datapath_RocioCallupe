@@ -5,10 +5,11 @@ BEGIN
 END
 BEGIN
 INSERT INTO Dim_clients
-SELECT DISTINCT [ClientID],
+SELECT  [ClientID],
 			[FirstName],
 			[LastName],
 			[Email],
 			[Region]
 FROM [LKH_PROY_INTEGRADOR_RCALL].[dbo].[clients]
+
 END
