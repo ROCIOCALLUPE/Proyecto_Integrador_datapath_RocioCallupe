@@ -7,7 +7,7 @@ END
 
 BEGIN
 insert into Fact_Sales
-SELECT distinct [SaleID],
+SELECT  [SaleID],
 			[ClientID],
 			[PropertyID],
 			[ListPriceUSD],
@@ -16,4 +16,5 @@ SELECT distinct [SaleID],
 			[SalePriceUSD],
 			[idSaleDate]
 FROM [LKH_PROY_INTEGRADOR_RCALL].[dbo].[sales]
+
 END
