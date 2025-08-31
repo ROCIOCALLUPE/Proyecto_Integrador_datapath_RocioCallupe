@@ -7,7 +7,7 @@ END
 
 BEGIN
 INSERT INTO Fact_leads
-SELECT distinct [LeadID],
+SELECT  [LeadID],
 			[ClientID],
 			[PropertyID],
 			[ListPriceUSD],
@@ -17,4 +17,5 @@ SELECT distinct [LeadID],
 			[LeadSource],
 			[idLeadDate]
 FROM [LKH_PROY_INTEGRADOR_RCALL].[dbo].[leads]
+
 END
