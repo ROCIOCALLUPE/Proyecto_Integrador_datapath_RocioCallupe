@@ -7,7 +7,7 @@ END
 
 BEGIN
 INSERT INTO Dim_properties
-SELECT DISTINCT
+SELECT 
      [PropertyID],
 			[ProjectID],
 			[PropertyType],
@@ -17,4 +17,5 @@ SELECT DISTINCT
 			[ListPriceUSD],
 			[AvailabilityStatus]
 FROM [LKH_PROY_INTEGRADOR_RCALL].[dbo].[properties]
+
 END
