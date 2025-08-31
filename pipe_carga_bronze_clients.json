@@ -1,0 +1,79 @@
+{
+    "name": "clients",
+    "type": "Copy",
+    "dependsOn": [
+        {
+            "activity": "brokers",
+            "dependencyConditions": [
+                "Succeeded"
+            ]
+        }
+    ],
+    "policy": {
+        "timeout": "0.12:00:00",
+        "retry": 0,
+        "retryIntervalInSeconds": 30,
+        "secureOutput": false,
+        "secureInput": false
+    },
+    "typeProperties": {
+        "source": {
+            "type": "BinarySource",
+            "storeSettings": {
+                "type": "AzureBlobFSReadSettings",
+                "recursive": true
+            },
+            "formatSettings": {
+                "type": "BinaryReadSettings"
+            },
+            "datasetSettings": {
+                "annotations": [],
+                "type": "Binary",
+                "typeProperties": {
+                    "location": {
+                        "type": "AzureBlobFSLocation",
+                        "fileName": "clients.csv",
+                        "folderPath": "raw_data",
+                        "fileSystem": "realstate"
+                    }
+                },
+                "externalReferences": {
+                    "connection": "c58b1b57-e459-428e-b16f-a33e8ab50a5e"
+                }
+            }
+        },
+        "sink": {
+            "type": "BinarySink",
+            "storeSettings": {
+                "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+                "annotations": [],
+                "linkedService": {
+                    "name": "LKH_PROY_INTEGRADOR_RCALL",
+                    "properties": {
+                        "annotations": [],
+                        "type": "Lakehouse",
+                        "typeProperties": {
+                            "workspaceId": "e859e9b3-5e74-462e-a46d-f701c907f9f1",
+                            "artifactId": "85821590-081b-4a45-9a28-5b870e0264a8",
+                            "rootFolder": "Files"
+                        }
+                    }
+                },
+                "type": "Binary",
+                "typeProperties": {
+                    "location": {
+                        "type": "LakehouseLocation",
+                        "fileName": {
+                            "value": "clients.csv",
+                            "type": "Expression"
+                        },
+                        "folderPath": "Bronze"
+                    }
+                }
+            }
+        },
+        "enableStaging": false
+    }
+}

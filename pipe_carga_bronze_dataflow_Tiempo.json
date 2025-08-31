@@ -1,0 +1,18 @@
+{
+    "name": "DF_Tiempo",
+    "type": "RefreshDataflow",
+    "dependsOn": [],
+    "policy": {
+        "timeout": "0.12:00:00",
+        "retry": 0,
+        "retryIntervalInSeconds": 30,
+        "secureOutput": false,
+        "secureInput": false
+    },
+    "typeProperties": {
+        "dataflowId": "f742b199-5c26-45b9-a23f-3f5b7cd42a52",
+        "workspaceId": "e859e9b3-5e74-462e-a46d-f701c907f9f1",
+        "notifyOption": "NoNotification",
+        "dataflowType": "DataflowFabric"
+    }
+}
