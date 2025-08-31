@@ -1,0 +1,10 @@
+
+
+
+/*------------------------------------------------------------
+1. Modificar Dynamic Data Masking
+------------------------------------------------------------*/ 
+
+
+ALTER TABLE Dim_clients
+ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()');
